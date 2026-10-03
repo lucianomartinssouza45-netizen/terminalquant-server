@@ -3,6 +3,7 @@ Servidor de notícias econômicas.
 
 Recebe eventos do uploader (POST) e serve pros clientes (GET).
 """
+import os
 from fastapi import FastAPI, HTTPException, Header
 from pydantic import BaseModel
 from typing import Optional
@@ -10,8 +11,8 @@ from datetime import datetime
 
 app = FastAPI(title="TerminalQuant News Server")
 
-# Token de autenticação (troque depois)
-TOKEN_UPLOAD = "TROQUE_ESSE_TOKEN_123"
+# Token de autenticação (lido da variável de ambiente TOKEN_UPLOAD)
+TOKEN_UPLOAD = os.getenv("TOKEN_UPLOAD", "TROQUE_ESSE_TOKEN_123")
 
 # Guarda os eventos em memória
 _eventos = []

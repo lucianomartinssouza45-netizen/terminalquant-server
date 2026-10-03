@@ -13,8 +13,8 @@ import requests
 # CONFIGURAÇÃO
 # ============================================================
 
-SERVIDOR_URL = "http://127.0.0.1:8000/api/calendar/update"
-TOKEN = "TROQUE_ESSE_TOKEN_123"
+SERVIDOR_URL = "https://terminalquant-server.onrender.com/api/calendar/update"
+TOKEN = "TQ_SECRET_2026_LUCIANO_XYZ"
 INTERVALO_VERIFICACAO = 60  # verifica a cada 60 segundos
 ARQUIVO_TIMESTAMP = ".ultimo_timestamp"
 
